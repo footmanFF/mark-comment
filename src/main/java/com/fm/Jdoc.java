@@ -13,8 +13,9 @@ import java.util.*;
 
 /**
  * @H1 标题1
+ *
  * @{anchor xxx} 锚点，可以跳转到一个当前页面的某个地方
- * <p>
+ *
  * The iterators returned by all of this class's "collection view methods
  * are __fail-fast__: if the map is structurally modified at any time after
  * the iterator is created, in any way except through the iterator's own
@@ -23,7 +24,7 @@ import java.util.*;
  * modification, the iterator fails quickly and cleanly, rather than risking
  * arbitrary, non-deterministic behavior at an undetermined time in the
  * future.
- * <p>
+ *
  * Note that the fail-fast behavior of an iterator cannot be guaranteed
  * as it is, generally speaking, impossible to make any hard guarantees in the
  * presence of unsynchronized concurrent modification.  Fail-fast iterators
@@ -31,35 +32,38 @@ import java.util.*;
  * Therefore, it would be wrong to write a program that depended on this
  * exception for its correctness: __the fail-fast behavior of iterators
  * should be used only to detect bugs.__
- * <p>
+ *
  * <Sql>
- * select * from sys_field_manage where col_code='car_evaluate@pawn';
+ *     select * from sys_field_manage where col_code='car_evaluate@pawn';
  * </Sql>
- * <p>
+ *
  * <Java>
- * public class Jdoc {
- * private String source;
- * private List<Comment> comments;
- * private List<FieldDoc> fieldDocs;
- * }
+ *     public class Jdoc {
+ *         private String source;
+ *         private List<Comment> comments;
+ *         private List<FieldDoc> fieldDocs;
+ *     }
  * <Java/>
+ *
  * @table |xx     |xxxxxx  |xx
- * @row |aaxxx  |aa      |aa
- * @row |aa     |aa      |aa
+ * @row   |aaxxx  |aa      |aa
+ * @row   |aa     |aa      |aa
+ *
  * @refrence Note that the fail-fast behavior of an iterator cannot be guaranteed
- * as it is, generally speaking, impossible to make any hard guarantees in the
- * presence of unsynchronized concurrent modification.  Fail-fast iterators
- * throw __ConcurrentModificationException__ on a best-effort basis.
- * Therefore, it would be wrong to write a program that depended on this
- * exception for its correctness: __the fail-fast behavior of iterators
- * should be used only to detect bugs.__
+ *           as it is, generally speaking, impossible to make any hard guarantees in the
+ *           presence of unsynchronized concurrent modification.  Fail-fast iterators
+ *           throw __ConcurrentModificationException__ on a best-effort basis.
+ *           Therefore, it would be wrong to write a program that depended on this
+ *           exception for its correctness: __the fail-fast behavior of iterators
+ *           should be used only to detect bugs.__
+ *
  * @list - 第一级的列表
- * - 第二级的列表
- * 列表下的内容
- * - 第一级的列表
- * - 第二级的列表
- * - 第三级的列表
- * - 第一级的列表
+ *           - 第二级的列表
+ *             列表下的内容
+ *       - 第一级的列表
+ *           - 第二级的列表
+ *               - 第三级的列表
+ *       - 第一级的列表
  */
 public class Jdoc {
 
@@ -67,27 +71,6 @@ public class Jdoc {
     private List<Comment> comments;
     private List<FieldDoc> fieldDocs;
 
-    /**
-     * 鹏元卡交易数据近 6 个月数据用户最新绑定的信用卡取自 clmg.user_creditcard_infosql如下：
-     * <code>
-     * select
-     * uname, bank_no
-     * from
-     * user_creditcard_info
-     * where
-     * uid=num and  bind_status=1 order by id desc limit 1
-     * </code>
-     * <p>
-     * <pre> {@code
-     * class DirectExecutor implements Executor {
-     *   public void execute(Runnable r) {
-     *     r.run();
-     *   }
-     * }}</pre>
-     * <p>
-     * 等燕清加了绑定时间后修改成根据绑定时间排序鹏元卡交易数据近 6 个月数据用户最新绑定的信用卡
-     * 取自等燕清加了绑定时间后修改成根据绑定时间排序
-     */
     public Jdoc(String source) {
         this.source = source;
         comments = new ArrayList<>();
