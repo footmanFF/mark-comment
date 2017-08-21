@@ -23,10 +23,11 @@ public class JsoupTest {
         Document document = Jsoup.parse(s);
         document.getAllElements();
         Element element = document.select("body").first();
-        element.children().forEach((t) -> {
-            t.tagName();
-            t.tagName();
-        });
+        element.children()
+               .forEach((t) -> {
+                   t.tagName();
+                   t.tagName();
+               });
     }
 
 }

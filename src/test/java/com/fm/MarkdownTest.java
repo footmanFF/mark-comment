@@ -1,6 +1,7 @@
 package com.fm;
 
 import net.steppschuh.markdowngenerator.table.Table;
+
 /**
  * @author zhangli on 2017/8/13.
  */
@@ -14,7 +15,7 @@ public class MarkdownTest {
                 .addRow("a3", "b3")
                 .addRow("a4", "b4")
                 .addRow("a5", "b5");
-        
+
         System.out.println(builder.build());
     }
 
