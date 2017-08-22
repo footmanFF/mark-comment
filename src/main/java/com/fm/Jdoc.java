@@ -6,7 +6,6 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.comments.Comment;
 import com.github.javaparser.ast.comments.JavadocComment;
 import com.github.javaparser.javadoc.Javadoc;
-import com.github.javaparser.javadoc.JavadocBlockTag;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
@@ -33,9 +32,9 @@ import java.util.*;
  * exception for its correctness: __the fail-fast behavior of iterators
  * should be used only to detect bugs.__
  *
- * <Sql>
+ * <SQL>
  *     select * from sys_field_manage where col_code='car_evaluate@pawn';
- * </Sql>
+ * </SQL>
  *
  * <Java>
  *     public class Jdoc {
@@ -101,24 +100,8 @@ public class Jdoc {
             Javadoc javadoc = javadocComment.parse();
 
             FieldDoc doc = new FieldDoc();
-            if (javadoc.getDescription() != null) {
-                String text = javadoc.getDescription()
-                                     .toText();
-                parseDesc(doc, text);
-            }
 
-            List<JavadocBlockTag> blockTags = javadoc.getBlockTags();
-            if (blockTags == null || blockTags.isEmpty()) {
-                return;
-            }
-
-            blockTags.forEach(blockTag -> {
-                BaseInfo baseInfo = new BaseInfo();
-                baseInfo.setName(blockTag.getTagName());
-                baseInfo.setValue(blockTag.toText());
-                doc.getBaseInfoList()
-                   .add(baseInfo);
-            });
+            javadoc.toText();
 
         });
         return docs;
@@ -129,6 +112,7 @@ public class Jdoc {
             return;
         }
         String[] contentList = text.split("\n\n");
+
 
     }
 

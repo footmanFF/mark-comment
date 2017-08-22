@@ -9,6 +9,6 @@ import lombok.Data;
 public class BaseInfo {
 
     private String name;
-    private String value;
+
 
 }
